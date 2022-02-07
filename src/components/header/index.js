@@ -35,7 +35,7 @@ const header = () => {
                         <a href="#header" className="text-decoration-none" >
                             <span className="HeaderItem">Chart</span>
                         </a>
-                        <a href="#header" className="text-decoration-none" >
+                        <a href="https://gallanttoken.com/buynow/" className="text-decoration-none" >
                             <span className="HeaderItem">Buy Now</span>
                         </a>
                         <a href="#header" className="text-decoration-none" >
