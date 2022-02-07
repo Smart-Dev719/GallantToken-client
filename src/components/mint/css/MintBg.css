@@ -1,0 +1,32 @@
+.mintBackImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.helmetVideo {
+    width: 60%;
+}
+
+.helmetImgs {
+    position: absolute;
+    top: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 18%;
+}
+
+.HelmetImg {
+    width: 12%;
+}
+
+@media (max-width: 1024px) {
+    .helmetVideo {
+        width: 80%;
+    }
+    .helmetImgs {
+        column-gap: 25%;
+    }
+}

@@ -1,0 +1,32 @@
+.PageHeaderLinks {
+    width: 1100px;
+    padding-left: 35px;
+
+}
+
+.PageHederIcons {
+    padding: 20px 0px;
+    gap: 30px;
+}
+
+.telegramIcon {
+    color: white;
+    width: 30px;
+}
+
+.iconImg {
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+    .PageHeaderLinks {
+        padding-left: 0px;
+        justify-content: center;
+    }
+
+    .iconImg {
+        font-size: 20px;
+    }
+}

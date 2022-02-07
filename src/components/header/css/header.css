@@ -1,0 +1,57 @@
+.PageHeader {
+    background-color: #0e0e0e;
+}
+
+.PageHeaderInRow {
+    padding: 20px 35px;
+    width: 1100px;
+    column-gap: 0px;
+}
+
+.PageLinksItems {
+    column-gap: 30px;
+    display: flex;
+}
+
+.HeaderLogo {
+    width: 220px;
+}
+
+.HeaderItem {
+    font-family: 'Marcellus SC';
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.WrapIcon {
+    color: white;
+    font-size: 28px;
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .PageLinksItems {
+        background-color: wheat;
+        display: none !important;
+    }
+
+    .HeaderLogo {
+        width: 400px;
+    }
+
+    .WrapIcon {
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .HeaderLogo {
+        width: 76%;
+    }
+
+    .WrapIcon {
+        font-size: 20px;
+    }
+}

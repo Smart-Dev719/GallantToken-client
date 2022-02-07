@@ -1,0 +1,60 @@
+.PageMintFormTitle {
+    font-family: 'Marcellus SC';
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+}
+
+.PageMintForm {
+    padding: 60px 0px;
+}
+
+.PageMintFormInRow {
+    width: 40%;
+    row-gap: 30px;
+}
+
+.PageFormInput,
+.PageFormTextArea {
+    text-indent: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #404040;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 0px;
+}
+
+.PageFormInput:focus,
+.PageFormTextArea:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.PageFormTextArea {
+    height: 170px;
+}
+
+.btnSend {
+    font-family: 'Marcellus SC';
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    color: white;
+    padding: 5px 30px;
+    border: 1px solid white;
+}
+
+.BtnSendLayer {
+    width: 100%;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .PageMintFormInRow {
+        width: 95%;
+    }
+}

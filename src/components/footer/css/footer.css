@@ -1,0 +1,11 @@
+.PageFooterInRow {
+    padding: 30px 0px 100px 10%;
+    display: flex;
+    width: 1100px;
+}
+
+.FooterText {
+    font-size: 16px;
+    font-weight: normal;
+    color: #eeeeee;
+}

@@ -1,0 +1,9 @@
+.SliderImg {
+    width: 50%;
+}
+
+@media screen and (max-width: 965px) {
+    .SliderImg {
+        width: 90%;
+    }
+}
