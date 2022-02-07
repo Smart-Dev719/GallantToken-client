@@ -57,7 +57,6 @@ const MintHeader = (props) => {
 
     const handleMint = () => {
         setMintLoading(true);
-        dispatch(onCheckMintable({ address: account }));
         dispatch(onGetMintData({ address: account, count: selectedCount }));
     };
 
