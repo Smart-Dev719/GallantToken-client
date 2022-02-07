@@ -26,7 +26,7 @@ const MintHeader = (props) => {
         window.ethereum.on("networkChanged", (networkId) => {
             setNetworkId(networkId);
         });
-    }, []);
+    });
 
     useEffect(async () => {
         if (mintable.count || mintable.failedMsg) {
