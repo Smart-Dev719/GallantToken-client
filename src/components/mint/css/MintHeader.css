@@ -15,6 +15,7 @@
     padding: 5px 0px;
     font-weight: 600;
     background-color: black;
+    cursor: pointer;
 }
 
 .input-group {
@@ -31,6 +32,58 @@
     font-size: 15px !important;
     font-weight: 800 !important;
     border-color: #aa6f16 !important;
+}
+
+.ConnectModal {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    position: absolute;
+    width: 550px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    font-family: "Marcellus SC";
+    font-weight: 900;
+}
+
+.ConnectModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.anticon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.ModalHeaderText {
+    font-size: 30px;
+}
+
+.ConnectModalMain {
+    row-gap: 40px;
+}
+
+.ConnectWallet {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: rgb(227, 227, 227);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.ModalHeader {
+    width: 100%;
 }
 
 .input-group-addon {
@@ -59,5 +112,19 @@
     }
     .input-group-addon {
         width: 50px;
+    }
+}
+@media (max-width: 550px) {
+    .ConnectModal {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .ConnectWallet {
+        font-size: 18px;
+    }
+    .WalletIcon {
+        width: 40px;
     }
 }
