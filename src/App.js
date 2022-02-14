@@ -66,6 +66,7 @@ function App() {
       const web3 = new Web3(provider);
       const accounts = await web3.eth.getAccounts();
       setAccount(accounts[0]);
+      setMetamaskConnected(true);
     } catch (err) {
       console.error(err);
     }
