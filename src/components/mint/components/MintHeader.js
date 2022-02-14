@@ -86,8 +86,8 @@ const MintHeader = (props) => {
                                 <span className="ModalHeaderText"><img src={Helmet} className="ModalLogo" alt='' /></span><span onClick={() => setViewModal(false)}><CloseOutlined className="ModalCloseBtn" /></span>
                             </div>
                             <div className="ModalDescription d-flex flex-column align-items-center">
-                                <span className="ModalTitle">Congratulation!</span>
-                                <span className="ModalText">You have successfully minted your Gnarlyknight!</span>
+                                <span className="ModalTitle">Congratulations!</span>
+                                <span className="ModalText">You have successfully minted your Gnarly knight!</span>
                             </div>
                         </div>
 
