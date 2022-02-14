@@ -57,20 +57,20 @@ function App() {
   });
 
   // const [account, setAccount] = useState('');
-  async function connectToWallet() {
-    try {
-      // const provider = await web3Modal.connect();
-      const provider = await web3Modal.connectTo("walletconnect");
-      // const provider = await web3Modal.connectTo("fortmatic");
-      // await web3Modal.toggleModal();
-      const web3 = new Web3(provider);
-      const accounts = await web3.eth.getAccounts();
-      setAccount(accounts[0]);
-      setMetamaskConnected(true);
-    } catch (err) {
-      console.error(err);
-    }
-  }
+  // async function connectToWallet() {
+  //   try {
+  //     // const provider = await web3Modal.connect();
+  //     const provider = await web3Modal.connectTo("walletconnect");
+  //     // const provider = await web3Modal.connectTo("fortmatic");
+  //     // await web3Modal.toggleModal();
+  //     const web3 = new Web3(provider);
+  //     const accounts = await web3.eth.getAccounts();
+  //     setAccount(accounts[0]);
+  //     setMetamaskConnected(true);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }
 
   useEffect(() => {
     // loadWeb3();
@@ -118,7 +118,7 @@ function App() {
           account={account}
           metamaskConnected={metamaskConnected}
           connectToMetamask={connectToMetamask}
-          connectToWallet={connectToWallet}
+        // connectToWallet={connectToWallet}
         />
         <Footer />
       </div>

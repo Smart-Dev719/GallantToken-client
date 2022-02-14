@@ -6,7 +6,7 @@ import MintBg from "./components/MintBg";
 import "./css/index.css";
 
 const mint = (props) => {
-    const { preLoading, setPreLoading, account, metamaskConnected, connectToMetamask, connectToWallet } = props;
+    const { preLoading, setPreLoading, account, metamaskConnected, connectToMetamask } = props;
     return (
         <>
             <div className="PageMintMain">
@@ -16,7 +16,7 @@ const mint = (props) => {
                     account={account}
                     metamaskConnected={metamaskConnected}
                     connectToMetamask={connectToMetamask}
-                    connectToWallet={connectToWallet}
+                // connectToWallet={connectToWallet}
                 />
                 {/* <MintSlider /> */}
                 {/* <MintForm /> */}

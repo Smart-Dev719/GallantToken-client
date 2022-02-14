@@ -41,13 +41,21 @@
     bottom: auto;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: black;
     position: absolute;
     width: 550px;
     border-radius: 20px;
     padding: 30px 20px;
     font-family: "Marcellus SC";
     font-weight: 900;
+    border: 1px solid white;
+}
+
+.ModalTitle {
+}
+
+.ModalLogo {
+    width: 60px;
 }
 
 .ConnectModalOverlay {
@@ -72,6 +80,10 @@
     row-gap: 40px;
 }
 
+.ModalCloseBtn {
+    color: white;
+}
+
 .ConnectWallet {
     width: 100%;
     border: 1px solid grey;
@@ -80,6 +92,17 @@
     background-color: rgb(227, 227, 227);
     font-size: 22px;
     cursor: pointer;
+}
+
+.ModalTitle {
+    color: white;
+    font-size: 40px;
+}
+
+.ModalText {
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 .ModalHeader {
@@ -126,5 +149,15 @@
     }
     .WalletIcon {
         width: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ModalTitle {
+        font-size: 35px;
+    }
+
+    .ModalText {
+        font-size: 15px;
     }
 }

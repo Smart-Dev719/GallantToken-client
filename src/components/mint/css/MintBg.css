@@ -10,16 +10,15 @@
 }
 
 .helmetImgs {
-    position: absolute;
-    top: 23%;
+    width: 75%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    column-gap: 18%;
+    top: 9%;
+    background-color: black;
 }
 
 .HelmetImg {
-    width: 12%;
+    width: 90%;
 }
 
 @media (max-width: 1024px) {
@@ -27,6 +26,6 @@
         width: 80%;
     }
     .helmetImgs {
-        column-gap: 25%;
+        top: 15%;
     }
 }

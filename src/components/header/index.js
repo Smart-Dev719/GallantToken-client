@@ -110,7 +110,7 @@ const header = () => {
                                             <a href="https://gallanttoken.com/kings-calling/"><span className="HeaderItem1">King's Calling</span></a>
                                         </div>
                                     </div>
-                                    <a href="https://gnarlyknightsnft.com/" className="text-decoration-none" >
+                                    <a href="https://gallanttoken.com/nfts/" className="text-decoration-none" >
                                         <span className="HeaderItem1">NFT's</span>
                                     </a>
 
