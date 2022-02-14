@@ -19,9 +19,9 @@ export const mintNft = async (price, tokenAmount, address) => {
     if (window.web3) {
         var web3 = window.web3;
 
-        const GallantToken = require("./GallantToken.json");
+        const GnarlyKnights = require("./GnarlyKnights.json");
         const add = web3.utils.toChecksumAddress(process.env.REACT_APP_ADDRESS);
-        const contract = new web3.eth.Contract(GallantToken.abi, add);
+        const contract = new web3.eth.Contract(GnarlyKnights.abi, add);
         let e;
         try {
             var correctPrice = web3.utils.toBN(
