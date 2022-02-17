@@ -72,40 +72,79 @@ function App() {
   //   }
   // }
 
-  useEffect(() => {
-    // loadWeb3();
-    // connectToMetamask();
-    loadWeb3();
-  }, []);
+  // useEffect(() => {
+  //   // loadWeb3();
+  //   // connectToMetamask();
+  //   loadWeb3();
+  // }, []);
 
   const [metamaskConnected, setMetamaskConnected] = useState(false);
   const [account, setAccount] = useState();
   const [preLoading, setPreLoading] = useState(false);
 
+  useEffect(() => {
+    async function listenMMAccount() {
+      if (window.ethereum) {
+        window.ethereum.on("accountsChanged", async function () {
+          connectToMetamask();
+        });
+        window.ethereum.on("chainChanged", async function () {
+          connectToMetamask();
+        });
+      }
+    }
+    listenMMAccount();
+  }, []);
+
   const connectToMetamask = async () => {
-    if (typeof window.ethereum !== 'undefined') {
-      await window.ethereum.enable();
+    if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
-      const web3 = window.web3;
+      window.ethereum.enable();
+    } else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider);
+    } else {
+      window.alert(
+        "Non-Ethereum browser detected. You should consider trying MetaMask!"
+      );
+    }
+    const web3 = window.web3;
+    const accounts = await web3.eth.getAccounts();
+    if (accounts.length == 0) {
+      setMetamaskConnected(false);
+    } else {
       const accounts = await web3.eth.getAccounts();
       console.log("connect info:", accounts);
       setAccount(accounts[0]);
-      setMetamaskConnected(true);
-      // window.location.reload();      
       console.log(accounts[0]);
+      setMetamaskConnected(true);
+
     }
   };
 
-  const loadWeb3 = async () => {
-    if (window.web3) {
-      window.web3 = new Web3(window.ethereum);
-      const web3 = window.web3;
-      const accounts = await web3.eth.getAccounts();
-      if (accounts[0]) {
-        setMetamaskConnected(true);
-      }
-    }
-  }
+  // const connectToMetamask = async () => {
+  //   if (typeof window.ethereum !== 'undefined') {
+  //     await window.ethereum.enable();
+  //     window.web3 = new Web3(window.ethereum);
+  //     const web3 = window.web3;
+  //     const accounts = await web3.eth.getAccounts();
+  //     console.log("connect info:", accounts);
+  //     setAccount(accounts[0]);
+  //     setMetamaskConnected(true);
+  //     // window.location.reload();      
+  //     console.log(accounts[0]);
+  //   }
+  // };
+
+  // const loadWeb3 = async () => {
+  //   if (window.web3) {
+  //     window.web3 = new Web3(window.ethereum);
+  //     const web3 = window.web3;
+  //     const accounts = await web3.eth.getAccounts();
+  //     if (accounts[0]) {
+  //       setMetamaskConnected(true);
+  //     }
+  //   }
+  // }
 
   return (
     <Provider store={store}>
