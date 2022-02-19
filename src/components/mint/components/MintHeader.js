@@ -107,7 +107,8 @@ const MintHeader = (props) => {
                     metamaskConnected ?
                         <button className="MintHeaderBtn" onClick={handleMint}>Mint Your Gnarly Knight</button>
                         :
-                        <button className="MintHeaderBtn" onClick={() => connectToMetamask()}>Connect Wallet</button>
+                        // <button className="MintHeaderBtn" onClick={() => connectToMetamask()}>Connect Wallet</button>
+                        <button className="MintHeaderBtn" >Minting will start soon!</button>
                 }
             </div >
         </>
